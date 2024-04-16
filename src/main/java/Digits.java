@@ -5,18 +5,16 @@ public class Digits
 
 	private ArrayList<Integer> digitList;
 
-public Digits (int num)
-{
-digitList = new ArrayList<Integer> ();
+public Digits(int num)
+{ /* to be implemented in part (a) */ digitlist = new Arraylist <Integer› ();
 if (num == 0)
-{
-digitList.add (new Integer (0));
+digitList.add(0);
+int n = num;
+while(n > 0){
+digitList. add(0,n%10);
+n=n/10;
 }
-while (num > 0)
-{
-digitList.add (0, new Integer (num & 10));
-num /= 10;
-}}
+}
 
 	public boolean isStrictlyIncreasing()
 { /* to be implemented in part (b) */ for (int i = 0; i < digitList.size()-1;i++)
@@ -28,4 +26,5 @@ return true;
 	{
 		return digitList.toString();
 	}
+}
 }

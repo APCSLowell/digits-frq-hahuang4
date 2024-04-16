@@ -19,14 +19,10 @@ num /= 10;
 }}
 
 	public boolean isStrictlyIncreasing()
-	{ /* to be implemented in part (b) */
-		int x=0;
-		for(int i=digitlist.size();i>0;i--)
-	if(digitList.get(i)<digitList.get(i-1))	
-x++;
-		if(x>0)
-			return false;
-	}
+{ /* to be implemented in part (b) */ for (int i = 0; i < digitList.size()-1;i++)
+if(digitList.get(i+1)<=digitList.get(i))
+return false;
+return true;
 	
 	public String toString()
 	{
